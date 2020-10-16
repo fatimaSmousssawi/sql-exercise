@@ -40,3 +40,40 @@ SET points=190
 WHERE name='Alex';
 ////////////////////////////////////////////////////////////////
 
+///////CREATING TABLE:
+
+1.create Table
+
+Ans:
+CREATE TABLE Graduates (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,
+	Name Text NOT NULL UNIQUE,
+	Age INTEGER,
+	Gender TEXT,
+	Points INTEGER, 
+	Graduation TEXT
+	
+);
+
+
+
+2.Copy Layals data from students to graduates
+Ans:
+INSERT INTO Graduates(ID,Name,Age,Gender,Points)
+SELECT *
+FROM students
+WHERE Name='Layal';
+
+3.Add the graduation date previously mentioned to Layals record in graduates
+Ans:
+UPDATE Graduates
+SET Graduation='08/09/2018'
+WHERE name='Layal';
+
+4.Remove Layals record from students
+Ans:
+DELETE  FROM students WHERE name='Layal';
+
+5.Commit ("Creating Table") 🔑🔑🔑🔑
+/////////////////////////////////////////////////////////
+
