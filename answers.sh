@@ -101,3 +101,44 @@ FROM employees,companies
 WHERE employees.role='Graphic Designer'
 AND companies.name=employees.company;
 
+4.Commit ("Joins") 🔑🔑🔑🔑🔑
+///////////////////////////////////////////////////////////////////////////////
+
+/////Count & Filter:
+
+1.Find the person with the highest number of points in students
+ANS:
+SELECT 
+    name
+FROM 
+    students
+WHERE 
+    points = (
+        SELECT 
+            MAX(points )
+        FROM
+            students);
+2.Find the average of points in students
+ANS:
+SELECT Avg(Points)
+FROM students;
+
+3.Find the number of students that have 500 points
+ANS:
+SELECT count(name)
+FROM students
+Where points=500;
+
+4.Find the names of students that contains 's'
+ANS:
+SELECT name
+FROM students
+Where name LIKE '%s%';
+
+5.Find all students based on the decreasing order of their points
+ANS:
+SELECT name
+FROM students 
+ORDER BY Points DESC;
+
+6.commit ("Count & Filter") 🔑🔑
