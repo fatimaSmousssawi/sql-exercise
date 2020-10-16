@@ -77,3 +77,27 @@ DELETE  FROM students WHERE name='Layal';
 5.Commit ("Creating Table") 🔑🔑🔑🔑
 /////////////////////////////////////////////////////////
 
+////Joins:
+
+1.Produce a table that contains, for each employee, his/her name, company name, and company date.
+Ans:
+CREATE TABLE Joined
+AS 
+SELECT employees.name,companies.Date,employees.company
+FROM employees
+INNER JOIN companies ON employees.Company=companies.name;
+
+2.Find the name of employees that work in companies made before 2000.
+Ans:
+SELECT employees.name
+FROM employees,companies
+WHERE companies.Name=employees.Company
+AND companies.date<2000;
+
+
+3.Find the name of company that has a graphic designer.
+Ans:SELECT companies.name
+FROM employees,companies
+WHERE employees.role='Graphic Designer'
+AND companies.name=employees.company;
+
