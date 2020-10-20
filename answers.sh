@@ -5,20 +5,20 @@ Ans: SELECT (name)
      FROM students;
 2. Get all the data of students above 30 years old 
 Ans:
-Select *
+SELECT *
 FROM students
 WHERE Age>30;
 
 3. Get the names of the females who are 30 years old 
 Ans:
-Select name
+SELECT name
 FROM students
 WHERE  Age=30
 AND Gender='F';
 
 4. Get the number of Points of Alex 
 Ans:
-Select Points
+SELECT Points
 FROM students
 WHERE  name='Alex';
 
